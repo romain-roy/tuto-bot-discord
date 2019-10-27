@@ -15,12 +15,14 @@ avec
 * `<CLIENT_ID>` : le numéro trouvable sur la page générale de l'application.
 * `<PERMISSIONS>` : le numéro obtenu en bas de la page dans l'onglet Bot en sélectionnant les permissions souhaitées.
 
+Suivre ce lien et ajouter le bot à l'un de ses serveurs.
+
 5. Créer un dossier où enregistrer le bot.
 
 6. Ouvrir la console **Node.js command prompt**, se rendre dans le dossier précédemment créer, et installer `discord.js` :
 ```
-cd C:\<chemin_vers_le_dossier>\tuto-bot-discord\
-npm install discord.js
+> cd C:\<chemin_vers_le_dossier>\tuto-bot-discord\
+> npm install discord.js
 ```
 
 7. Créer un fichier `bot.js` et copier dedans le code ci-dessous :
@@ -47,7 +49,7 @@ client.on('message', msg => {
 
 9. Lancer le bot en tapant dans la console :
 ```
-node bot.js
+> node bot.js
 ```
 Si tout s'est bien passé, il devrait apparaître **Logged in** dans la console, et le bot devrait être connecté sur Discord. Essayer d'envoyer **ping**, le bot devrait répondre **pong**. Le bot est maintenant configuré. 👏
 
