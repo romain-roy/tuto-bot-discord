@@ -59,25 +59,43 @@ Si tout s'est bien passé, il devrait apparaître **Logged in** dans la console,
 
 ⚠ La solution que je propose utilise l'hébergeur **Heroku**, c'est ce que je connais de plus abordable, mais il existe d'autres méthodes ! 
 
-1. Créer un fichier nommé `procfile` avec uniquement la ligne `worker: node bot.js` à l'intérieur.
-
-2. Remplacer le token du bot dans le code par `process.env.TOKEN`. La ligne ressemblera donc à ça :
+1. Toujours dans le même dossier, créer un fichier `package.json` et copier dedans le contenu suivant : 
+```json
+{
+	"name": "Nom du bot",
+	"description": "Description du bot",
+	"version": "1.0.0",
+	"main": "bot.js",
+	"scripts": {
+		"test": "node bot.js"
+	},
+	"dependencies": {
+		"discord.js": "^11.5.1" // ou version utilisée
+	}
+}
 ```
+
+2. Créer un autre fichier nommé `procfile` avec uniquement la ligne `worker: node bot.js` à l'intérieur.
+
+3. Remplacer le token du bot dans le code par `process.env.TOKEN`. La ligne ressemblera donc à ça :
+```js
 const token = client.login(process.env.TOKEN);
 ```
 
-3. Sauvegarder son code sur GitHub. Ne pas sauvegarder le dossier `node_modules/`, et dans le cas d'un dépôt public, faire attention que le token n'apparaisse sur aucun fichier car il doit **rester confidentiel**.
+4. Sauvegarder son code sur GitHub. Ne pas sauvegarder le dossier `node_modules/`, et dans le cas d'un dépôt public, faire attention que le token n'apparaisse sur aucun fichier car il doit **rester confidentiel**.
 
-4. Créer un compte sur [Heroku](https://www.heroku.com/).
+5. Créer un compte sur [Heroku](https://www.heroku.com/).
 
-5. Sur Heroku, créer une nouvelle **app**.
+6. Sur Heroku, créer une nouvelle **app**.
 
-6. Aller dans l'onglet **Deploy** et connecter son dépôt GitHub.
+7. Aller dans l'onglet **Deploy** et connecter son dépôt GitHub.
 
-7. En dessous, cliquer sur **Enable Automatic Deploys**.
+8. En dessous, cliquer sur **Enable Automatic Deploys**.
 
-8. Encore en dessous, cliquer sur **Deploy Branch**.
+9. Encore en dessous, cliquer sur **Deploy Branch**. Vérifier que le build réussisse.
 
-9. Aller dans l'onglet **Settings**, cliquer sur **Reveal Config Vars**, saisir "TOKEN" dans la case `KEY` et le token du bot dans la case `VALUE`. Valider en cliquant sur **Add**.
+10. Aller dans l'onglet **Settings**, cliquer sur **Reveal Config Vars**, saisir "TOKEN" dans la case `KEY` et le token du bot dans la case `VALUE`. Valider en cliquant sur **Add**.
 
-10. 
+11. Aller dans l'onglet **Ressources**, cliquer sur le crayon pour désactiver **Web** et activer **Worker**.
+
+Le bot est maintenant hébergé en ligne, il est accessible depuis n'importe où et à n'importe quel moment ! 🌍🤖💬
