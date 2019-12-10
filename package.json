@@ -1,0 +1,22 @@
+{
+	"name": "tuto-bot-discord",
+	"version": "1.0.0",
+	"description": "Tutoriel pour apprendre à faire un bot Discord",
+	"main": "bot.js",
+	"dependencies": {
+		"discord.js": "^11.5.1"
+	},
+	"scripts": {
+		"test": "node bot.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rroyromain/tuto-bot-discord.git"
+	},
+	"author": "Romain Roy",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/rroyromain/tuto-bot-discord/issues"
+	},
+	"homepage": "https://github.com/rroyromain/tuto-bot-discord#readme"
+}

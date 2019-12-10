@@ -59,8 +59,25 @@ Si tout s'est bien passé, il devrait apparaître **Logged in** dans la console,
 
 ⚠ La solution que je propose utilise l'hébergeur **Heroku**, c'est ce que je connais de plus abordable, mais il existe d'autres méthodes ! 
 
-1. Sauvegarder son code sur GitHub. Ne pas sauvegarder le dossier `node_modules/`, et dans le cas d'un dépôt public, faire attention que le token du bot n'apparaisse sur aucun fichier car il doit **rester confidentiel**.
+1. Créer un fichier nommé `procfile` avec uniquement la ligne `worker: node bot.js` à l'intérieur.
 
-2. Créer un compte sur [Heroku](https://www.heroku.com/).
+2. Remplacer le token du bot dans le code par `process.env.TOKEN`. La ligne ressemblera donc à ça :
+```
+const token = client.login(process.env.TOKEN);
+```
 
-3. 
+3. Sauvegarder son code sur GitHub. Ne pas sauvegarder le dossier `node_modules/`, et dans le cas d'un dépôt public, faire attention que le token n'apparaisse sur aucun fichier car il doit **rester confidentiel**.
+
+4. Créer un compte sur [Heroku](https://www.heroku.com/).
+
+5. Sur Heroku, créer une nouvelle **app**.
+
+6. Aller dans l'onglet **Deploy** et connecter son dépôt GitHub.
+
+7. En dessous, cliquer sur **Enable Automatic Deploys**.
+
+8. Encore en dessous, cliquer sur **Deploy Branch**.
+
+9. Aller dans l'onglet **Settings**, cliquer sur **Reveal Config Vars**, saisir "TOKEN" dans la case `KEY` et le token du bot dans la case `VALUE`. Valider en cliquant sur **Add**.
+
+10. 
