@@ -70,10 +70,11 @@ Si tout s'est bien passé, il devrait apparaître **Logged in** dans la console,
 		"test": "node bot.js"
 	},
 	"dependencies": {
-		"discord.js": "^11.5.1" // ou version utilisée
+		"discord.js": "^11.5.1"
 	}
 }
 ```
+Remplacer éventuellement le numéro de version de **discord.js** par celui de la version utilisée (trouvable dans `package-lock.json`).
 
 2. Créer un autre fichier nommé `procfile` avec uniquement la ligne `worker: node bot.js` à l'intérieur.
 
