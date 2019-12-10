@@ -1,4 +1,4 @@
-# Instruction
+# Instructions
 
 1. Installer [Node.js](https://nodejs.org/en/).
 
