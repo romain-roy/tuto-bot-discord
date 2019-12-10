@@ -37,7 +37,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === "ping") {
+  if (msg.content === "!ping") {
     msg.channel.send("pong");
   }
 });
@@ -51,6 +51,10 @@ client.on('message', msg => {
 ```
 > node bot.js
 ```
-Si tout s'est bien passé, il devrait apparaître **Logged in** dans la console, et le bot devrait être connecté sur Discord. Essayer d'envoyer **ping**, le bot devrait répondre **pong**. Le bot est maintenant configuré. 👏
+Si tout s'est bien passé, il devrait apparaître **Logged in** dans la console, et le bot devrait être connecté sur Discord. Essayer d'envoyer **!ping**, le bot devrait répondre **pong**. Le bot est maintenant configuré. 👏
 
-10. Pour aller plus loin : Documentation de [discord.js](https://discord.js.org/#/docs/main/stable/general/welcome).
+10. Pour aller plus loin : La [documentation](https://discord.js.org/#/docs/main/stable/general/welcome) et le [guide](https://discordjs.guide/) de **discord.js**.
+
+### Hébergement
+
+Bientôt.
