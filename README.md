@@ -55,6 +55,12 @@ Si tout s'est bien passé, il devrait apparaître **Logged in** dans la console,
 
 10. Pour aller plus loin : La [documentation](https://discord.js.org/#/docs/main/stable/general/welcome) et le [guide](https://discordjs.guide/) de **discord.js**.
 
-### Hébergement
+## Hébergement
 
-Bientôt.
+⚠ La solution que je propose utilise l'hébergeur **Heroku**, c'est ce que je connais de plus abordable, mais il existe d'autres méthodes ! 
+
+1. Sauvegarder son code sur GitHub. Ne pas sauvegarder le dossier `node_modules/`, et dans le cas d'un dépôt public, faire attention que le token du bot n'apparaisse sur aucun fichier car il doit **rester confidentiel**.
+
+2. Créer un compte sur [Heroku](https://www.heroku.com/).
+
+3. 
