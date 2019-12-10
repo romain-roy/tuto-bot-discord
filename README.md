@@ -76,7 +76,7 @@ Si tout s'est bien passé, il devrait apparaître **Logged in** dans la console,
 ```
 Remplacer éventuellement le numéro de version de **discord.js** par celui de la version utilisée (trouvable dans `package-lock.json`).
 
-2. Créer un autre fichier nommé `procfile` avec uniquement la ligne `worker: node bot.js` à l'intérieur.
+2. Créer un autre fichier nommé `Procfile` avec uniquement la ligne `worker: node bot.js` à l'intérieur.
 
 3. Remplacer le token du bot dans le code par `process.env.TOKEN`. La ligne ressemblera donc à ça :
 ```js
