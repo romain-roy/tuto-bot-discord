@@ -4,7 +4,9 @@
 	"description": "Tutoriel pour apprendre à faire un bot Discord",
 	"main": "bot.js",
 	"dependencies": {
-		"discord.js": "^11.5.1"
+		"discord.js": "^11.5.1",
+		"ffmpeg": "0.0.4",
+		"opusscript": "0.0.7"
 	},
 	"scripts": {
 		"test": "node bot.js"
