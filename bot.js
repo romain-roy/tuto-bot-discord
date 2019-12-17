@@ -105,7 +105,7 @@ client.on('message', message => {
 /* À l'arrivé d'un nouveau membre */
 
 client.on('guildMemberAdd', member => {
-	const channel = member.guild.channels.find(ch => ch.name === 'general');
+	const channel = member.guild.channels.find(ch => ch.name === 'général');
 	if (!channel) return;
 
 	let random_number = Math.floor(Math.random() * Math.floor(greetings.length));
