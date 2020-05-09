@@ -99,4 +99,6 @@ const token = client.login(process.env.TOKEN);
 
 11. Aller dans l'onglet **Ressources**, cliquer sur le crayon pour désactiver **Web** et activer **Worker**.
 
+12. (Optionnel) Pour lire de la musique avec le bot, il faut ajouter un buildpack FFmpeg dans l'onglet Settings sur Heroku.
+
 Le bot est maintenant hébergé en ligne, il est accessible depuis n'importe où et à n'importe quel moment ! 🌍🤖💬
